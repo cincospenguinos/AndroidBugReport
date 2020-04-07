@@ -1,5 +1,7 @@
 package com.stoicapps.roll4initiative.shared;
 
+import androidx.annotation.NonNull;
+
 import java.util.Random;
 
 public class DiceRoll extends RandomizedValue {
@@ -24,6 +26,22 @@ public class DiceRoll extends RandomizedValue {
         }
 
         return value + modifier;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        String str = rolls + "d" + faces;
+
+        if (modifier < 0) {
+            return str + modifier;
+        }
+
+        if (modifier > 0) {
+            return str + "+" + modifier;
+        }
+
+        return str;
     }
 
     public static void setSeed(long seed) {
