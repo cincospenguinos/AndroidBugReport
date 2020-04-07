@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:1659743525747010360",
-      "lastPropertyId": "2:8274402399741402097",
+      "lastPropertyId": "3:1124478893735022261",
       "name": "CreatureTemplate",
       "properties": [
         {
@@ -17,6 +17,11 @@
         {
           "id": "2:8274402399741402097",
           "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:1124478893735022261",
+          "name": "initiative",
           "type": 9
         }
       ],

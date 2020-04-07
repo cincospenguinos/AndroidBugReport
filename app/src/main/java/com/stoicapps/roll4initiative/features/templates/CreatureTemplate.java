@@ -10,7 +10,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import io.objectbox.annotation.Convert;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
-import io.objectbox.annotation.Transient;
 
 @Entity
 public class CreatureTemplate {
@@ -23,7 +22,7 @@ public class CreatureTemplate {
     @Convert(converter = RandomizedValueConverter.class, dbType = String.class)
     private RandomizedValue initiative;
 
-    @Transient
+    @Convert(converter = RandomizedValueConverter.class, dbType = String.class)
     private RandomizedValue hitPoints;
 
     public CreatureTemplate() {}
@@ -80,5 +79,13 @@ public class CreatureTemplate {
 
     public void setInitiative(RandomizedValue initiative) {
         this.initiative = initiative;
+    }
+
+    public RandomizedValue getHitPoints() {
+        return hitPoints;
+    }
+
+    public void setHitPoints(RandomizedValue hitPoints) {
+        this.hitPoints = hitPoints;
     }
 }
