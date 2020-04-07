@@ -8,7 +8,6 @@ public abstract class RandomizedValue {
     public static RandomizedValue fromString(String rollString) {
         if (rollString.matches(DICE_ROLL_REGEX)) {
             String[] pieces = rollString.split("[d+-]");
-            boolean hasModifier = pieces.length == 3;
 
             int rolls = Integer.parseInt(pieces[0]);
             int faces = Integer.parseInt(pieces[1]);
