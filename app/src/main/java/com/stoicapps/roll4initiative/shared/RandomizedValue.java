@@ -12,13 +12,9 @@ public abstract class RandomizedValue {
 
             int rolls = Integer.parseInt(pieces[0]);
             int faces = Integer.parseInt(pieces[1]);
+            int modifier = extractModifier(rollString);
 
-            if (hasModifier) {
-                int modifier = extractModifier(rollString);
-                return new DiceRoll(rolls, faces, modifier);
-            }
-
-            return new DiceRoll(rolls, faces, 0);
+            return new DiceRoll(rolls, faces, modifier);
         }
 
         return new FlatAmount(Integer.parseInt(rollString));
