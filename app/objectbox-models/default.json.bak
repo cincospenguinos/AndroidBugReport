@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:1659743525747010360",
-      "lastPropertyId": "1:7145049802383086505",
+      "lastPropertyId": "2:8274402399741402097",
       "name": "CreatureTemplate",
       "properties": [
         {
@@ -13,6 +13,11 @@
           "name": "id",
           "type": 6,
           "flags": 1
+        },
+        {
+          "id": "2:8274402399741402097",
+          "name": "name",
+          "type": 9
         }
       ],
       "relations": []

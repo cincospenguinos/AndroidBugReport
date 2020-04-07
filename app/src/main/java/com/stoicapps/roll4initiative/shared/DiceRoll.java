@@ -1,6 +1,9 @@
 package com.stoicapps.roll4initiative.shared;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import java.util.Random;
 
@@ -42,6 +45,26 @@ public class DiceRoll extends RandomizedValue {
         }
 
         return str;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (!(obj instanceof DiceRoll)) {
+            return false;
+        }
+
+        DiceRoll other = (DiceRoll) obj;
+
+        return this.hashCode() == other.hashCode();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder()
+                .append(rolls)
+                .append(faces)
+                .append(modifier)
+                .build();
     }
 
     public static void setSeed(long seed) {

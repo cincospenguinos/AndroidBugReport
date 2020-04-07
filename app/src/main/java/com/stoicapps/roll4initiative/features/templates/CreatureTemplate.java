@@ -3,9 +3,11 @@ package com.stoicapps.roll4initiative.features.templates;
 import androidx.annotation.Nullable;
 
 import com.stoicapps.roll4initiative.shared.RandomizedValue;
+import com.stoicapps.roll4initiative.shared.storage.RandomizedValueConverter;
 
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import io.objectbox.annotation.Convert;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 import io.objectbox.annotation.Transient;
@@ -18,7 +20,7 @@ public class CreatureTemplate {
 
     private String name;
 
-    @Transient
+    @Convert(converter = RandomizedValueConverter.class, dbType = String.class)
     private RandomizedValue initiative;
 
     @Transient
@@ -70,5 +72,13 @@ public class CreatureTemplate {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public RandomizedValue getInitiative() {
+        return initiative;
+    }
+
+    public void setInitiative(RandomizedValue initiative) {
+        this.initiative = initiative;
     }
 }

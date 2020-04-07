@@ -31,6 +31,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
     testImplementation 'junit:junit:4.13'
+    testImplementation "io.objectbox:objectbox-windows:$objectboxVersion"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
