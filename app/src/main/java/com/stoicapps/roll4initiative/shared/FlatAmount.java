@@ -3,7 +3,7 @@ package com.stoicapps.roll4initiative.shared;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.apache.commons.lang3.builder.HashCodeBuilder;
+//import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class FlatAmount extends RandomizedValue {
     private int amount;
@@ -36,6 +36,6 @@ public class FlatAmount extends RandomizedValue {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(amount).build();
+        return amount;
     }
 }

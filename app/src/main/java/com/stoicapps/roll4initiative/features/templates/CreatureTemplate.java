@@ -5,8 +5,6 @@ import androidx.annotation.Nullable;
 import com.stoicapps.roll4initiative.shared.RandomizedValue;
 import com.stoicapps.roll4initiative.shared.storage.RandomizedValueConverter;
 
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-
 import io.objectbox.annotation.Convert;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
@@ -50,11 +48,12 @@ public class CreatureTemplate {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder()
-                .append(name)
-                .append(initiative.toString())
-                .append(hitPoints.toString())
-                .build();
+        return super.hashCode();
+//        return new HashCodeBuilder()
+//                .append(name)
+//                .append(initiative.toString())
+//                .append(hitPoints.toString())
+//                .build();
     }
 
     public long getId() {

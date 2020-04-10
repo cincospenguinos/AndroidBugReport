@@ -3,7 +3,7 @@ package com.stoicapps.roll4initiative.shared;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.apache.commons.lang3.builder.HashCodeBuilder;
+//import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import java.util.Random;
 
@@ -60,11 +60,12 @@ public class DiceRoll extends RandomizedValue {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder()
-                .append(rolls)
-                .append(faces)
-                .append(modifier)
-                .build();
+//        return new HashCodeBuilder()
+//                .append(rolls)
+//                .append(faces)
+//                .append(modifier)
+//                .build();
+        return super.hashCode();
     }
 
     public static void setSeed(long seed) {
